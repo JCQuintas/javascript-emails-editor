@@ -1,6 +1,5 @@
-import './index.css'
-import { createPaper } from './paper'
-import { Options, defaultOptions } from './options'
+import { createPaper } from './components/paper'
+import { Options, defaultOptions } from './components/options'
 
 declare const window: any
 

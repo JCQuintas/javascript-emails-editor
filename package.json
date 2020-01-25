@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "style": "dist/index.css",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "parcel src/index.html -d build --open",
-    "build": "rimraf dist && parcel build src/index.ts",
+    "build": "rimraf dist && tsc --project ./tsconfig.json && parcel build src/index.ts src/index.css",
     "prettier": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "devDependencies": {

@@ -8,6 +8,9 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outFile": "./dist/index.d.ts",
     "lib": [
       "es6",
       "dom"
