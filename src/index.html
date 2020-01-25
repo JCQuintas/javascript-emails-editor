@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      #app > :not(:first-child) {
+        margin-top: 48px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script src="./index.ts"></script>
+    <script>
+      const root = document.getElementById('app')
+
+      window.EmailsEditor({
+        container: root,
+        title: 'Special Board 1',
+        onChange: (t, email, emails) => console.log('board1', t, email, emails),
+      })
+      window.EmailsEditor({
+        container: root,
+        title: 'Special Board 2',
+        onChange: (t, email, emails) => console.log('board2', t, email, emails),
+      })
+    </script>
+  </body>
+</html>

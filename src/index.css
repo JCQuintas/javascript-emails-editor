@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.emails-editor__paper {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 50, 1);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.emails-editor__heading {
+  font-weight: normal;
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.emails-editor__content-section {
+  padding: 32px 48px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.emails-editor__button-section {
+  display: flex;
+  flex-direction: row;
+  padding: 32px 48px;
+}
+
+.emails-editor__button-section :not(:first-child) {
+  margin-left: 16px;
+}
+
+.emails-editor__button {
+  background-color: rgba(66, 98, 255, 1);
+  transition: background-color 250ms ease-in;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.emails-editor__button:hover {
+  background-color: rgba(66, 98, 255, 0.9);
+}
+
+.emails-editor__button:focus {
+  outline: none;
+}
+
+.emails-editor__input-container {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 96px;
+  overflow: auto;
+  cursor: text;
+}
+
+.emails-editor__text-input {
+  height: 24px;
+  margin-left: 4px;
+  border: none;
+  min-width: 48px;
+  display: inline-flex;
+}
+
+.emails-editor__text-input:focus {
+  outline: none;
+}
+
+.emails-editor__text-input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.emails-editor__email-pill {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: rgba(66, 98, 255, 0.2);
+  border-radius: 16px;
+  height: 24px;
+  cursor: default;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  user-select: none;
+}
+
+.emails-editor__email-pill.emails-editor__email-pill--invalid-email
+  .emails-editor__email-text {
+  border-bottom: 1px dashed red;
+}
+
+.emails-editor__close-svg {
+  margin-left: 4px;
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+}
