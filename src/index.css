@@ -98,6 +98,17 @@
   border-bottom: 1px dashed red;
 }
 
+.emails-editor__close-button {
+  color: rgba(0, 0, 50, 1);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.emails-editor__close-button:focus {
+  outline: none;
+}
+
 .emails-editor__close-svg {
   margin-left: 4px;
   fill: currentColor;
