@@ -8,12 +8,16 @@
   "scripts": {
     "start": "parcel src/index.html -d build --open",
     "build": "rimraf dist && tsc --project ./tsconfig.json && parcel build src/index.ts src/index.css",
-    "prettier": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "prettier": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "jest": "^25.1.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "1.19.1",
     "rimraf": "^3.0.0",
+    "ts-jest": "^25.0.0",
     "typescript": "^3.7.5"
   },
   "keywords": []
