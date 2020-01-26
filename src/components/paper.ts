@@ -19,7 +19,7 @@ export const createPaper = (options: Options) => {
   buttonSection.className = 'emails-editor__button-section'
 
   const addEmail = () => {
-    setEmails(`email${Math.ceil(Math.random() * 10000)}@anymail.com`)
+    setEmails(`email${Math.ceil(Math.random() * 10000)}@mail.com`)
   }
 
   const getEmailsCount = () => {

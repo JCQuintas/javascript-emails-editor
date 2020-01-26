@@ -1,19 +1,20 @@
 import { createEmailPill } from './email-pill'
 import { Options } from './options'
-//junis@gmas.com, sasdas@aso.com, sasfasdasa
+
 export const createInput = (options: Options) => {
   const inputContainer = document.createElement('div')
   inputContainer.className = 'emails-editor__input-container'
 
-  const textinput = document.createElement('input')
-  textinput.className = 'emails-editor__text-input'
-  textinput.placeholder = 'add more people...'
+  const textInput = document.createElement('input')
+  textInput.className = 'emails-editor__text-input'
+  textInput.placeholder = 'add more people...'
 
   const createBlock = () => {
-    const value = textinput.value.trim()
+    const value = textInput.value.trim()
+
     if (value !== '') {
       setEmails(value)
-      textinput.value = ''
+      textInput.value = ''
     }
   }
 
@@ -34,19 +35,19 @@ export const createInput = (options: Options) => {
     setEmails(data)
   }
 
-  textinput.addEventListener('keydown', onKeyDown)
-  textinput.addEventListener('blur', createBlock)
-  textinput.addEventListener('paste', onPaste)
+  textInput.addEventListener('keydown', onKeyDown)
+  textInput.addEventListener('blur', createBlock)
+  textInput.addEventListener('paste', onPaste)
 
   const focusTextInput = (event: Event) => {
-    if (event.target === textinput || event.target === inputContainer)
-      textinput.focus()
+    if (event.target === textInput || event.target === inputContainer)
+      textInput.focus()
   }
 
   inputContainer.addEventListener('focus', focusTextInput)
   inputContainer.addEventListener('click', focusTextInput)
 
-  inputContainer.append(textinput)
+  inputContainer.append(textInput)
 
   const onRemove = (email: string) => {
     options.onChange && options.onChange('remove', email, getEmails())
@@ -58,7 +59,7 @@ export const createInput = (options: Options) => {
     emails.split(',').forEach((v: string) => {
       const value = v.trim()
       if (value) {
-        inputContainer.insertBefore(createEmailPill(value, onRemove), textinput)
+        inputContainer.insertBefore(createEmailPill(value, onRemove), textInput)
         options.onChange && options.onChange('add', value, getEmails())
       }
     })
